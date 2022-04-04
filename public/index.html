@@ -4,27 +4,86 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
         
-        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>
             My chat
         </title>
     </head>
     <body>
-        
-        <p id="chatWin" >
-            Msgs:
 
-        </p>
+<!-- 
+Chat Receive
+
+    <div class="chatr">
+        <div class="rcv">
+            <h4 id="receiving">Hi</h4>
+        </div>
+
+    </div>
+
+    <div class="chats">
+        <div class="snd">
+            <h4 id="sending">Hi this is Ayush Saha. And I would like to inform that you have a meeting now.</h4>
+        </div>
+    </div>
+
+ -->
+ 
+
+        <div class="container">
+            <div class="chatbox">
+                <div class="user-status">
+                    <img src="https://bit.ly/3wHm3CH">
+                    <div class="self-info">
+                        <h3><input type="text" id="nameBox" placeholder="Enter Name"> </h3>
+                        <div id="type"> </div>
+                    </div>
+                </div>
+
+
+                <div id="chatWindow">
+                    <!-- <div class="chatr">
+                        <div class="rcv">
+                            <h6 id="rName">sadf</h6>
+                            <h4 id="receiving">Hifdsafsd</h4>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="chats">
+                        <div class="snd">
+                            <h4 id="sending">Hi this is Ayush Saha. And I would like to inform that you have a meeting now.</h4>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="msg-input">
+                    <input type="text" placeholder="Enter your message" id="txtBox">
+                    <button class="send_b" onclick="sendMessage()">
+                        <img src="60525.png">
+                    </button>
+                </div>
+            </div> 
+    
+            
+        </div>    
         <div id="type">
 
         </div>
+<!--         
+        <div id="chatWindow">
+            Msgs:
+
+        </div>
+
     <form>
-        <input type="text" id="nameBox"> 
+        
         <br>
         <input type="text" id="txtBox"> 
         <br>
         <button onclick="sendMessage()" type="button"> Send</button>
-    </form>
+    </form> -->
     <script src="client.js"></script>
     </body>
 </html>
