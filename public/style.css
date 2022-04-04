@@ -85,6 +85,8 @@ body{
 	max-width: 70%;
 	min-width: 30px;
 	border-radius: 10px 10px 10px 0;
+	animation-name: rcv1;
+	animation-duration: 0.718s;
 }
 
 .chats{
@@ -175,4 +177,25 @@ body{
 
 ::-webkit-scrollbar{
 	width: 0px;
+}
+
+@keyframes rcv1{
+
+	0%{
+		transform: scale(0.6);
+
+	}
+
+	25%{
+		transform: scale(1.0);
+	}
+
+	50%{
+		transform: scale(0.9);
+	}
+
+	100%{
+		transform: scale(1.0);
+	}
+
 }

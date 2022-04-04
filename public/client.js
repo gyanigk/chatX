@@ -3,7 +3,8 @@ var socket=io.connect('http://localhost:9041/')
 const msgBox=document.getElementById("txtBox"),
     nm=document.getElementById("nameBox"),
     typeDiv=document.getElementById("type"),
-    chatWin=document.getElementById("chatWindow");
+    chatWin=document.getElementById("chatWindow"),
+    btn=document.getElementById("btnnn");
 
 //send msg
 function sendMessage(){
@@ -96,14 +97,17 @@ socket.on('chat',function(data){
 
 msgBox.addEventListener('keypress', function(e){
     
-    if (e.key === 'Enter' && msgBox.value!="") {
-        sendMessage()
+    if (e.key === 'Enter') {
+        if(msgBox.value!=="") sendMessage()
     }else{
         socket.emit('typing', nm.value)
     }
 
 })
 
+btn.addEventListener('click',function(){
+    if(msgBox.value!=="") sendMessage()
+})
 
 
 socket.on('typing', function(data){
